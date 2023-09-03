@@ -133,7 +133,7 @@ def main():
                 return "quit"
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE: # Escape Key
-                    return "quit";
+                    return "quit"
 
         # Key Polling, handles "key up" and "key down" actions
         key = pygame.key.get_pressed()
@@ -144,7 +144,7 @@ def main():
 
             if player.gun_loaded == 1:
                 player.gun_loaded = 0 # disable flag
-                sfx_player_shoot.play(); # Play the SFX
+                sfx_player_shoot.play() # Play the SFX
 
                 # Initialize a new laser, and add it to the group
                 laser = Lasers()
@@ -199,7 +199,7 @@ def main():
                     if enemy.alive:
                         enemy.alive = False
                         score += 100
-                        sfx_enemy_die.play(); # sfx
+                        sfx_enemy_die.play() # sfx
                         laser.kill()
             if laser.type == 1: # Enemy Laser hits Player
                 if pygame.sprite.collide_mask(laser, player):

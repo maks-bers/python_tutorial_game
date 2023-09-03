@@ -17,10 +17,10 @@ class Lasers(pygame.sprite.Sprite):
 
         sprite_sheet = SpriteSheet("assets/Images/sprite_sheet.png")
             # player bullet (blue)
-        image = sprite_sheet.get_image(48, 0, 16, 16);
+        image = sprite_sheet.get_image(48, 0, 16, 16)
         self.frames.append(image) # Frame 1 = player
             # enemy bullet (red)
-        image = sprite_sheet.get_image(48, 16, 16, 16);
+        image = sprite_sheet.get_image(48, 16, 16, 16)
         self.frames.append(image) # Frame 2 = Enemy
 
         self.mask = pygame.mask.from_surface(image) # create a mask for collision (same for both lasers)
